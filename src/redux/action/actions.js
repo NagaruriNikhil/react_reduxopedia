@@ -1,3 +1,3 @@
 import { createAction } from "@reduxjs/toolkit";
 
-export const resetReduxOPedia = createAction("reduxopedia/reset");
+export const resetReduxopedia = createAction("reduxopedia/reset");

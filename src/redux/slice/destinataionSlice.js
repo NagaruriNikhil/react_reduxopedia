@@ -1,10 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { resetReduxOPedia } from "../action/actions";
-const initalState = () => {
+import { resetReduxopedia } from "../action/actions";
+
+const initialState = () => {
   return {
     destinations: [
       {
-        name: "Hong Kong",
+        name: "Hong kong",
         days: 7,
         fact: "World's longest covered escalator",
       },
@@ -25,18 +26,18 @@ const initalState = () => {
 
 export const destinationSlice = createSlice({
   name: "destination",
-  initialState: initalState,
+  initialState: initialState,
   reducers: {
     destinationClicked: (state, action) => {
       state.destinationSelected = action.payload;
     },
-    resetDestination: (state, action) => {
-      console.log(action);
-      state.destinationSelected = null;
-    },
+    // resetDestination: (state, action) => {
+    //   console.log(action);
+    //   state.destinationSelected = null;
+    // },
   },
   extraReducers: (builder) => {
-    builder.addCase(resetReduxOPedia, (state, action) => {
+    builder.addCase(resetReduxopedia, (state, action) => {
       state.destinationSelected = null;
     });
   },
